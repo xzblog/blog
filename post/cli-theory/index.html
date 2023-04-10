@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>脚手架运行原理解析 | Miracle的记事本</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.shengfan.icu/favicon.ico?v=1681054591088">
+<link rel="stylesheet" href="https://www.shengfan.icu/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="脚手架是我们前端每个人都会接触到的东西？ 但你真的了解它吗？
+
+
+案例执行环境： macOS
+包管理工具：yarn
+
+这里我们以 @vue/cli 为例：
+vue command [options] &lt;params&gt;
+
+
+vue..." />
+    <meta name="keywords" content="cli" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.shengfan.icu">
+        <img src="https://www.shengfan.icu/images/avatar.png?v=1681054591088" class="site-logo">
+        <h1 class="site-title">Miracle的记事本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="#">Miracle</a> | <a class="rss" href="https://www.shengfan.icu/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">脚手架运行原理解析</h2>
+            <div class="post-date">2022-08-23</div>
+            
+            <div class="post-content" v-pre>
+              <p>脚手架是我们前端每个人都会接触到的东西？ 但你真的了解它吗？</p>
+<!-- more -->
+<blockquote>
+<p>案例执行环境： macOS<br>
+包管理工具：yarn</p>
+</blockquote>
+<p>这里我们以 <code>@vue/cli</code> 为例：</p>
+<pre><code>vue command [options] &lt;params&gt;
+</code></pre>
+<ul>
+<li>vue : 命令名称</li>
+<li>command： 支持的指令： 如 create、 add...</li>
+<li>options：额外参数： 一般会有两种， 全称：<code>--version</code> 、 <code>--help</code>；简写：<code>-v</code> 、<code>-h</code></li>
+</ul>
+<h3 id="我们在终端输入-vue-后发生了什么">我们在终端输入 vue 后发生了什么？</h3>
+<blockquote>
+<p>想要在终端执行某个命令，首先是需要将该程序的可执行文件添加到系统环境变量。一般情况下这个事情系统都会帮我们代劳。</p>
+</blockquote>
+<p>查看下现有的环境变量</p>
+<pre><code>echo $PATH
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657881949934-7b03314a-6337-4e21-85c3-5711be0fd11f.png?x-oss-process=image%2Fresize%2Cw_1416%2Climit_0" alt="环境变量" loading="lazy"></figure>
+<p>第一个红框内容是全局安装<code>yarn</code>之后添加的一个环境变量。</p>
+<pre><code>which vue
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657877535585-22636c8e-d789-464f-9ed6-46bc0c9d292e.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0" alt="" loading="lazy"></figure>
+<p>通过图我们可以看出，当我们安装好<code>@vue/cli</code> 之后会到它会在环境变量<code>/User/miracle/.yarn/bin</code>目录下创建一个软连接（这里因为我环境的原因创建了多个），但是它最终指向的是 <code>@vue/cli/bin/vue.js</code> 文件。而整个 <code>@vue/cli</code> 目录是我们在全局安装该脚手架时下载到本机的，也就是vue脚手架的所有代码。</p>
+<p>进入该目录，我们可以看到整个项目的组成：</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657877997638-e2d60aa7-90b7-4a74-bc4f-83d29de6e2d2.png?x-oss-process=image%2Fresize%2Cw_1330%2Climit_0" alt="image-20220715174045529" loading="lazy"></figure>
+<p>那么 <code>vue</code> 指向的 <code>@vue/cli/bin/vue.js</code> 文件究竟是在哪里定义的呢？</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657878603816-c8e498b4-672e-4559-ae10-a2d0e2c9758d.png" alt="image-20220715174956798" loading="lazy"></figure>
+<p>答案就在 <code>package.json</code> 文件中，<code> bin</code> 属性是命令名到可执行文件的映射，在这里我们可以指定脚手架的名称和指向文件。</p>
+<p><strong>小结下：</strong></p>
+<ol>
+<li>我们在使用npm或yarn全局安装脚手架的时候，会将脚手架的代码下载到本机的 npm或yarn的全局目录下的 <code>node_modules</code> 下。</li>
+<li>下载好后npm或yarn会去解析 <code>package.json</code> 文件。如果有配置有 <code>bin</code>，就会根据提供的bin信息到<code>node_modules/.bin</code> 目录下创建一个软链接如： <code>vue =&gt; @vue/cli/bin/vue.js</code>。</li>
+<li>当我们在终端执行<code>vue</code> 命令的时候，首先会到环境变量中寻找有没有vue这个指令，没有找打则会抛出错误。找到了的话就继续寻找该命令指向的文件，执行时实际上就是执行的是该文件，在我里就是<code>/Users/miracle/.config/yarn/global/node_modules/@vue/cli/bin/vue.js</code> 文件。</li>
+</ol>
+<p>🤔️ 看到这里你会发现上面步骤4中会有一个问题，就是正常情况下我们直接在终端输入一个js文件的地址，他并不会执行，而是会报错。那是因为我们想要执行某个文件，需要在其前面加上执行者的，如：</p>
+<pre><code>node hello.js
+javac hello.java
+python hello.py
+</code></pre>
+<p>但这里却没有指定执行者，那么在vue脚手架中计算机是怎么判断这个js文件到底是由谁来解析的呢？</p>
+<p>答案就在 <code>@vue/cli/bin/vue.js</code> 文件中。</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657880852042-3929a914-f1c3-4f79-948d-52bec4391a37.png" alt="img" loading="lazy"></figure>
+<pre><code class="language-bash">#!/usr/bin/env node
+</code></pre>
+<p>即表示到环境变量中找到node来执行该文件。</p>
+<p>所以 当我们在终端中执行 <code>vue</code> 命令时等同于</p>
+<pre><code class="language-bash">node xxx/node_modules/@vue/cli/bin/vue.js
+</code></pre>
+<h2 id="附加">附加</h2>
+<h3 id="如何创建软链接">如何创建软链接🔗</h3>
+<p>创建软链接就相当于创建快捷方式，可进入环境变量下的某bin目录</p>
+<pre><code>ln -s [name] [path] # name：名称； path：指向地址
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://www.shengfan.icu/tag/r54d0uNPH/" class="tag">
+                    cli
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.shengfan.icu/post/okr/">
+                  <h3 class="post-title">
+                    何为OKR？
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

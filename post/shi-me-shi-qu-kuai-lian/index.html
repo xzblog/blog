@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>什么是区块链？ | Miracle的记事本</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.shengfan.icu/favicon.ico?v=1681054591088">
+<link rel="stylesheet" href="https://www.shengfan.icu/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="区块链及区块链技术相关的一些基本概念解释~
+
+区块链是一种去中心化的数字交易分类账，是一个不断增长的电子记录列表，它将被长期保留，并且通过加密术（一种算法代码）保证其安全。区块链分类帐数据分布在计算机网络中。用户可以直接与存储的数据进行实时..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.shengfan.icu">
+        <img src="https://www.shengfan.icu/images/avatar.png?v=1681054591088" class="site-logo">
+        <h1 class="site-title">Miracle的记事本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="#">Miracle</a> | <a class="rss" href="https://www.shengfan.icu/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">什么是区块链？</h2>
+            <div class="post-date">2023-04-08</div>
+            
+            <div class="post-content" v-pre>
+              <p>区块链及区块链技术相关的一些基本概念解释~</p>
+<!-- more -->
+<p>区块链是一种去中心化的数字交易分类账，是一个不断增长的电子记录列表，它将被长期保留，并且通过加密术（一种算法代码）保证其安全。区块链分类帐数据分布在计算机网络中。用户可以直接与存储的数据进行实时交互，而无需中介（“中间人”或分销商）来验证交易。该技术为区块链中的各方提供了一个独立、防篡改和透明的平台，可安全地存储、传输和处理敏感信息。</p>
+<p>特性：</p>
+<ul>
+<li>去中心化</li>
+<li>点对点</li>
+<li>防篡改</li>
+<li>通过共识同步化</li>
+<li>消除了对第三方验证机构的需求</li>
+<li>特定区块链中的全部交易对涉及的各方都可见</li>
+</ul>
+<h3 id="区块链如何运作">区块链如何运作</h3>
+<p>区块链是一种记录保存系统，在将条目添加到数据链之前会有多个源来验证该条目。数据一旦添加，便无法更改，记录随之分布到网络中的多个位置。向区块链序列添加新记录（称为区块）需要由连接到区块链网络的多个成员进行验证。这些数据区块相互链接而形成链。区块链中的全部交易对其中的所有人公开，但所有个人身份都是隐藏的。</p>
+<p>区块链技术使用算法为每个区块分配加密哈希（包含字母和数字的唯一字符串，有时也称为“数字指纹”）。除哈希以外，每个区块还包含带时间戳的先前交易的记录集，以及前一个区块的哈希。正是这种机制确保了在链中的连续区块之间建立起不可变的链接。</p>
+<p>加密术和时间戳的组合确保了区块链技术能自动验证这个增长的哈希序列永远不会更改。这种操作机制能够防止不按顺序插入新区块，从而防止交易数据事后被更改或伪造。</p>
+<figure data-type="image" tabindex="1"><img src="https://www.shengfan.icu/post-images/1681054442508.jpg" alt="交易流程" loading="lazy"></figure>
+<h3 id="相关概念">相关概念</h3>
+<p>区块：区块是区块链中的基本单位，它由区块头和交易记录组成。每个区块都包含了前一个区块的哈希值，这样就形成了一个不可篡改的区块链。</p>
+<p>交易：交易是区块链中的基本操作，它可以记录所有发生的价值交换，例如比特币的交易、以太坊的智能合约等。每个交易都包括发起方、接收方、交易金额等信息。</p>
+<p>挖矿：挖矿是指通过计算机节点对交易进行验证，并将其打包成区块，然后添加到区块链中的过程。挖矿所使用的计算过程是一种基于工作量证明（PoW）的竞争过程，参与者可以通过提供计算能力来获得区块奖励。</p>
+<p>以上是区块链技术的基本概念，除此之外，还有许多其他的概念和技术，例如共识算法、智能合约、分布式存储等，这些概念和技术共同构成了区块链技术的体系结构。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.shengfan.icu/post/web3-xue-xi-xian-lu/">
+                  <h3 class="post-title">
+                    Web3 学习线路
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

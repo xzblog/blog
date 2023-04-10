@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.shengfan.icu</id>
+    <title>Miracle的记事本</title>
+    <updated>2023-04-10T02:55:18.001Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.shengfan.icu"/>
+    <link rel="self" href="https://www.shengfan.icu/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://www.shengfan.icu/images/avatar.png</logo>
+    <icon>https://www.shengfan.icu/favicon.ico</icon>
+    <rights>All rights reserved 2023, Miracle的记事本</rights>
+    <entry>
+        <title type="html"><![CDATA[基于Web3的DApp开发]]></title>
+        <id>https://www.shengfan.icu/post/ji-yu-web3-de-dapp-kai-fa/</id>
+        <link href="https://www.shengfan.icu/post/ji-yu-web3-de-dapp-kai-fa/">
+        </link>
+        <updated>2023-04-09T15:11:18.000Z</updated>
+        <content type="html"><![CDATA[<p>开始进入开发环节咯～</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[什么是区块链？]]></title>
+        <id>https://www.shengfan.icu/post/shi-me-shi-qu-kuai-lian/</id>
+        <link href="https://www.shengfan.icu/post/shi-me-shi-qu-kuai-lian/">
+        </link>
+        <updated>2023-04-08T02:56:38.000Z</updated>
+        <summary type="html"><![CDATA[<p>区块链及区块链技术相关的一些基本概念解释~</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>区块链及区块链技术相关的一些基本概念解释~</p>
+<!-- more -->
+<p>区块链是一种去中心化的数字交易分类账，是一个不断增长的电子记录列表，它将被长期保留，并且通过加密术（一种算法代码）保证其安全。区块链分类帐数据分布在计算机网络中。用户可以直接与存储的数据进行实时交互，而无需中介（“中间人”或分销商）来验证交易。该技术为区块链中的各方提供了一个独立、防篡改和透明的平台，可安全地存储、传输和处理敏感信息。</p>
+<p>特性：</p>
+<ul>
+<li>去中心化</li>
+<li>点对点</li>
+<li>防篡改</li>
+<li>通过共识同步化</li>
+<li>消除了对第三方验证机构的需求</li>
+<li>特定区块链中的全部交易对涉及的各方都可见</li>
+</ul>
+<h3 id="区块链如何运作">区块链如何运作</h3>
+<p>区块链是一种记录保存系统，在将条目添加到数据链之前会有多个源来验证该条目。数据一旦添加，便无法更改，记录随之分布到网络中的多个位置。向区块链序列添加新记录（称为区块）需要由连接到区块链网络的多个成员进行验证。这些数据区块相互链接而形成链。区块链中的全部交易对其中的所有人公开，但所有个人身份都是隐藏的。</p>
+<p>区块链技术使用算法为每个区块分配加密哈希（包含字母和数字的唯一字符串，有时也称为“数字指纹”）。除哈希以外，每个区块还包含带时间戳的先前交易的记录集，以及前一个区块的哈希。正是这种机制确保了在链中的连续区块之间建立起不可变的链接。</p>
+<p>加密术和时间戳的组合确保了区块链技术能自动验证这个增长的哈希序列永远不会更改。这种操作机制能够防止不按顺序插入新区块，从而防止交易数据事后被更改或伪造。</p>
+<figure data-type="image" tabindex="1"><img src="https://www.shengfan.icu/post-images/1681054442508.jpg" alt="交易流程" loading="lazy"></figure>
+<h3 id="相关概念">相关概念</h3>
+<p>区块：区块是区块链中的基本单位，它由区块头和交易记录组成。每个区块都包含了前一个区块的哈希值，这样就形成了一个不可篡改的区块链。</p>
+<p>交易：交易是区块链中的基本操作，它可以记录所有发生的价值交换，例如比特币的交易、以太坊的智能合约等。每个交易都包括发起方、接收方、交易金额等信息。</p>
+<p>挖矿：挖矿是指通过计算机节点对交易进行验证，并将其打包成区块，然后添加到区块链中的过程。挖矿所使用的计算过程是一种基于工作量证明（PoW）的竞争过程，参与者可以通过提供计算能力来获得区块奖励。</p>
+<p>以上是区块链技术的基本概念，除此之外，还有许多其他的概念和技术，例如共识算法、智能合约、分布式存储等，这些概念和技术共同构成了区块链技术的体系结构。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Web3 学习线路]]></title>
+        <id>https://www.shengfan.icu/post/web3-xue-xi-xian-lu/</id>
+        <link href="https://www.shengfan.icu/post/web3-xue-xi-xian-lu/">
+        </link>
+        <updated>2023-04-08T02:55:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>加入光荣的进化吧～</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>加入光荣的进化吧～</p>
+<!--more-->
+<ol>
+<li>学习Web3的基础知识</li>
+</ol>
+<ul>
+<li>学习区块链技术的基本概念，如区块、交易、挖矿等</li>
+<li>了解常见的加密货币，如比特币、以太坊等</li>
+<li>了解智能合约的原理及其应用场景</li>
+<li>学习Solidity语言，这是一个用于编写以太坊智能合约的语言</li>
+</ul>
+<ol start="2">
+<li>学习以太坊生态系统</li>
+</ol>
+<ul>
+<li>了解以太坊的一些核心概念，如以太坊虚拟机、Gas等</li>
+<li>学习以太坊的开发工具，如Remix、Truffle等</li>
+<li>学习以太坊的网络和节点，如以太坊主网、测试网络等</li>
+<li>了解以太坊生态系统中的一些主要应用，如去中心化交易所、加密艺术品等</li>
+</ul>
+<ol start="3">
+<li>学习与Web3相关的技术</li>
+</ol>
+<ul>
+<li>学习Web3.js，这是一个用于与以太坊交互的JavaScript库</li>
+<li>了解IPFS，这是一个去中心化的文件存储和传输协议，可以与Web3一起使用</li>
+<li>学习基于Web3的DApp开发，了解如何使用React.js等前端框架开发去中心化应用</li>
+</ul>
+<ol start="4">
+<li>实践项目</li>
+</ol>
+<ul>
+<li>创造自己的加密令牌或去中心化应用</li>
+<li>参与以太坊社区的开发或者参加类似于以太坊黑客松的活动，和开发者和专家学习和交流</li>
+</ul>
+<ol start="5">
+<li>继续深入学习</li>
+</ol>
+<ul>
+<li>探索更多的Web3应用场景和技术，如零知识证明、多链互操作等</li>
+<li>参加更多的社区活动，探讨和交流关于各个方面的问题。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[脚手架运行原理解析]]></title>
+        <id>https://www.shengfan.icu/post/cli-theory/</id>
+        <link href="https://www.shengfan.icu/post/cli-theory/">
+        </link>
+        <updated>2022-08-23T09:26:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>脚手架是我们前端每个人都会接触到的东西？ 但你真的了解它吗？</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>脚手架是我们前端每个人都会接触到的东西？ 但你真的了解它吗？</p>
+<!-- more -->
+<blockquote>
+<p>案例执行环境： macOS<br>
+包管理工具：yarn</p>
+</blockquote>
+<p>这里我们以 <code>@vue/cli</code> 为例：</p>
+<pre><code>vue command [options] &lt;params&gt;
+</code></pre>
+<ul>
+<li>vue : 命令名称</li>
+<li>command： 支持的指令： 如 create、 add...</li>
+<li>options：额外参数： 一般会有两种， 全称：<code>--version</code> 、 <code>--help</code>；简写：<code>-v</code> 、<code>-h</code></li>
+</ul>
+<h3 id="我们在终端输入-vue-后发生了什么">我们在终端输入 vue 后发生了什么？</h3>
+<blockquote>
+<p>想要在终端执行某个命令，首先是需要将该程序的可执行文件添加到系统环境变量。一般情况下这个事情系统都会帮我们代劳。</p>
+</blockquote>
+<p>查看下现有的环境变量</p>
+<pre><code>echo $PATH
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657881949934-7b03314a-6337-4e21-85c3-5711be0fd11f.png?x-oss-process=image%2Fresize%2Cw_1416%2Climit_0" alt="环境变量" loading="lazy"></figure>
+<p>第一个红框内容是全局安装<code>yarn</code>之后添加的一个环境变量。</p>
+<pre><code>which vue
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657877535585-22636c8e-d789-464f-9ed6-46bc0c9d292e.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0" alt="" loading="lazy"></figure>
+<p>通过图我们可以看出，当我们安装好<code>@vue/cli</code> 之后会到它会在环境变量<code>/User/miracle/.yarn/bin</code>目录下创建一个软连接（这里因为我环境的原因创建了多个），但是它最终指向的是 <code>@vue/cli/bin/vue.js</code> 文件。而整个 <code>@vue/cli</code> 目录是我们在全局安装该脚手架时下载到本机的，也就是vue脚手架的所有代码。</p>
+<p>进入该目录，我们可以看到整个项目的组成：</p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657877997638-e2d60aa7-90b7-4a74-bc4f-83d29de6e2d2.png?x-oss-process=image%2Fresize%2Cw_1330%2Climit_0" alt="image-20220715174045529" loading="lazy"></figure>
+<p>那么 <code>vue</code> 指向的 <code>@vue/cli/bin/vue.js</code> 文件究竟是在哪里定义的呢？</p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657878603816-c8e498b4-672e-4559-ae10-a2d0e2c9758d.png" alt="image-20220715174956798" loading="lazy"></figure>
+<p>答案就在 <code>package.json</code> 文件中，<code> bin</code> 属性是命令名到可执行文件的映射，在这里我们可以指定脚手架的名称和指向文件。</p>
+<p><strong>小结下：</strong></p>
+<ol>
+<li>我们在使用npm或yarn全局安装脚手架的时候，会将脚手架的代码下载到本机的 npm或yarn的全局目录下的 <code>node_modules</code> 下。</li>
+<li>下载好后npm或yarn会去解析 <code>package.json</code> 文件。如果有配置有 <code>bin</code>，就会根据提供的bin信息到<code>node_modules/.bin</code> 目录下创建一个软链接如： <code>vue =&gt; @vue/cli/bin/vue.js</code>。</li>
+<li>当我们在终端执行<code>vue</code> 命令的时候，首先会到环境变量中寻找有没有vue这个指令，没有找打则会抛出错误。找到了的话就继续寻找该命令指向的文件，执行时实际上就是执行的是该文件，在我里就是<code>/Users/miracle/.config/yarn/global/node_modules/@vue/cli/bin/vue.js</code> 文件。</li>
+</ol>
+<p>🤔️ 看到这里你会发现上面步骤4中会有一个问题，就是正常情况下我们直接在终端输入一个js文件的地址，他并不会执行，而是会报错。那是因为我们想要执行某个文件，需要在其前面加上执行者的，如：</p>
+<pre><code>node hello.js
+javac hello.java
+python hello.py
+</code></pre>
+<p>但这里却没有指定执行者，那么在vue脚手架中计算机是怎么判断这个js文件到底是由谁来解析的呢？</p>
+<p>答案就在 <code>@vue/cli/bin/vue.js</code> 文件中。</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.nlark.com/yuque/0/2022/png/232269/1657880852042-3929a914-f1c3-4f79-948d-52bec4391a37.png" alt="img" loading="lazy"></figure>
+<pre><code class="language-bash">#!/usr/bin/env node
+</code></pre>
+<p>即表示到环境变量中找到node来执行该文件。</p>
+<p>所以 当我们在终端中执行 <code>vue</code> 命令时等同于</p>
+<pre><code class="language-bash">node xxx/node_modules/@vue/cli/bin/vue.js
+</code></pre>
+<h2 id="附加">附加</h2>
+<h3 id="如何创建软链接">如何创建软链接🔗</h3>
+<p>创建软链接就相当于创建快捷方式，可进入环境变量下的某bin目录</p>
+<pre><code>ln -s [name] [path] # name：名称； path：指向地址
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[何为OKR？]]></title>
+        <id>https://www.shengfan.icu/post/okr/</id>
+        <link href="https://www.shengfan.icu/post/okr/">
+        </link>
+        <updated>2022-08-22T15:52:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>OKR（Objective &amp; Key Results），中文名称是“目标与关键结果”，是一个目标管理工具。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>OKR（Objective &amp; Key Results），中文名称是“目标与关键结果”，是一个目标管理工具。</p>
+<!-- more -->
+<h2 id="okr-概念简述">OKR 概念简述</h2>
+<ul>
+<li>
+<p>Objectives 是目标（O），回答的是“我和我的团队想要完成什么”</p>
+</li>
+<li>
+<p>Key Results 是一系列可衡量的关键结果（KR），回答的是“我如何知道自己是否达成了目标”</p>
+</li>
+</ul>
+<p><strong>OKR 承接的是组织的使命、愿景、战略，启发的是项目与任务。</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://p9-hera.byteimg.com/tos-cn-i-jbbdkfciu3/9f3fc40d685949409c75e4351ebadfc0~tplv-jbbdkfciu3-image:0:0.image" alt="img" loading="lazy"></figure>
+<p>O，是在理解组织的使命、愿景、战略的基础上制定出来。 O 一定要与组织的使命、愿景、战略有相关性。</p>
+<p>KR，代表的是实现 O 的策略和路径。如果 O 达成了，表现出来的结果便是 KR。</p>
+<p><strong>写 OKR 的过程，可以帮助我们理解组织愿景，引发对业务的深入思考，从而找到实现自我价值的途径。</strong></p>
+<h2 id="okr带来的价值">OKR带来的价值</h2>
+<p>在一个人的成长过程和职业发展中，制定清晰的目标至关重要，<strong>OKR 正是一套协助组织进行目标管理的工具和方法，它能帮助我们明确目标、聚焦重点。</strong></p>
+<p>同时OKR是透明的，在团队中成员之间能够了解彼此的目标和需求，更好地进行协同</p>
+<p>增强自驱力： OKR不是从上到下的强制分配，而是个人根据组织的使命愿景制定的个人目标，能提高参与感和积极性。</p>
+]]></content>
+    </entry>
+</feed>
